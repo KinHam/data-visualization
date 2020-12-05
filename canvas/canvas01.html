@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id='canvas' width='800px' height='800px'></canvas>
+  <script>
+    const canvas = document.getElementById('canvas')
+    const ctx = canvas.getContext('2d') //获取Canvas对象
+    ctx.fillStyle = 'red' //修改填充色为红色
+    // x  y  宽度  高度
+    // Rect矩形
+    ctx.fillRect(0,0,50,50)
+    
+    ctx.beginPath() //绘制路径
+    ctx.lineWidth = 2; //线的宽度
+    ctx.strokeStyle = 'blue' //绘制蓝色线段
+    ctx.moveTo(100,100)  //设置起点 x,y
+    ctx.lineTo(250,75)  //结束位置
+    ctx.stroke()
+    ctx.lineWidth = 1
+    ctx.lineTo(300,100) //可以调用多次lineTo绘制多条线段
+    ctx.stroke()   //绘制线段
+
+    //绘制圆形
+    ctx.beginPath()
+    ctx.lineWidth = 2
+    ctx.strokeStyle = 'green'
+    ctx.fillStyle = 'red'
+    //圆心x,y  半径  开始角度 结束角度
+    ctx.arc(200,200,50,0,2*Math.PI)  //圆心位置
+    ctx.stroke()
+    ctx.fill()
+
+    ctx.beginPath()
+    ctx.lineWidth = 1
+    ctx.strokeStyle = 'red'
+    ctx.moveTo(300,300)
+    ctx.lineTo(301,301)
+    ctx.stroke()
+  </script>
+</body>
+</html>
