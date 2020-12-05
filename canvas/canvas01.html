@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Canvas01</title>
 </head>
 <body>
   <canvas id='canvas' width='800px' height='800px'></canvas>
@@ -41,6 +41,15 @@
     ctx.moveTo(300,300)
     ctx.lineTo(301,301)
     ctx.stroke()
+
+    /*
+      canvas的绘制流程
+        1.canvas标签,<canvas></canvas>(注意指定宽高)
+        2.获取canvas DOM对象
+        3.获取Canvas对象 canvas.getContext('2d')
+        4.设置绘图属性 
+        5.使用绘图API
+    */
   </script>
 </body>
 </html>
